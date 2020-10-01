@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #2a2b2f;
+    
+}
+section {
+    width: 100%;
+    height: 100vh;
+}
+.container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.box {
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    position: relative;
+    margin: 30px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3),
+    -5px -5px 10px rgba(255, 255, 255, 0.3);
+}
+.card {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: #2a2b2f;
+    border: solid 2px #1e1f23;
+    border-radius: 20px;
+    box-shadow:0 20px 50px rgba(0, 0, 0, 0.5);
+    transition: 2s;
+}
+.container .box:hover .card {
+    transform: translateY(-50px);
+    box-shadow:0 20px 20px rgba(0, 0, 0, 0.8);
+}
+
+.contents h1 {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 8rem;
+    color: rgba(247, 244, 244, 0.1);
+}
+.contents h2 {
+    position: absolute;
+    top: 110px;
+    left: 40px;
+    padding: 0 20px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.contents p {
+    position: absolute;
+    top: 150px;
+    padding: 10px 20px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.contents a {
+    position: absolute;
+    bottom: 20px;
+    left: 70px;
+    background-color: rgba(82, 182, 248, 0.8);
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 20px;
+    color: #000;
+}

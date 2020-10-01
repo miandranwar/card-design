@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: gray;
+    
+    
+}
+section {
+    width: 100%;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.box {
+    position: relative;
+    width: 350px;
+    height: 450px;
+    background-color: gray;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.3),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.2),
+    5px 5px 15px rgba(0, 0, 0, 0.3),
+    -5px -5px 15px rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+.card {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    transition: 2s;
+    box-shadow: 20px 0px 50px #000;
+}
+.circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(180px at center 0);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    top: 0;
+    left: 0;
+    background-color: crimson;
+}
+.circle h1 {
+    position: absolute;
+    top: 30px;
+    left: 132px;
+    font-size: 4rem;
+    color: #fff;
+}
+.box:hover .card {
+    transform: translateY(-50px);
+    box-shadow: 20px 10px 70px #000;
+}
+.contents {
+    position: absolute;
+    top: 200px;
+    padding: 20px;
+}
+.contents h1 {
+    text-align: center;
+    color: crimson;
+    padding: 10px 0;
+}

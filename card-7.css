@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #d9d9d9;
+}
+section {
+    width: 100%;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.container .card {
+    width: 350px;
+    height: 400px;
+    /* background-color: #fff; */
+    position: relative;
+    box-shadow: 10px 10px 40px #000;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.card p {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 20px 40px;
+    z-index: -2;
+}
+.card .front {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    font-size: 12rem;
+    color: #fff;
+    z-index: 3;
+    transition: 2s;
+}
+.card:hover .front {
+    opacity: 0;
+}
+.container .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg,
+                        #f30755 0%,
+                        #f30755 20%,
+                        transparent 20%,
+                        transparent 40%,
+                        #f30755 40%,
+                        #f30755 60%,
+                        transparent 60%,
+                        transparent 80%,
+                        #f30755 80%,
+                        #f30755 100%
+                        );
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: 2s;
+}
+.container .card:hover:before {
+    left: 350px;
+}
+.container .card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg,
+                        transparent 0%,
+                        transparent 20%,
+                        #1e2635 20%,
+                        #1e2635 40%,
+                        transparent 40%,
+                        transparent 60%,
+                        #1e2635 60%,
+                        #1e2635 80%,
+                        transparent 80%,
+                        transparent 100%
+                        );
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    transition: 2s;
+}
+.container .card:hover:after {
+    left: -100%;
+}
